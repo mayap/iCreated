@@ -1,0 +1,14 @@
+.navigation-header {
+  display: flex;
+  justify-content: space-between;
+
+  &__left-side {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__right-side {
+    display: flex;
+    flex-direction: row;
+  }
+}
