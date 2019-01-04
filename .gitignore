@@ -1,0 +1,19 @@
+/api/node_modules
+
+/iCreated-public/node_modules
+/iCreated-public/dist
+/iCreated-public/tmp
+
+# misc
+/iCreated-public/.sass-cache
+/iCreated-public/connect.lock
+/iCreated-public/coverage/*
+/iCreated-public/libpeerconnection.log
+/iCreated-public/npm-debug.log*
+/iCreated-public/yarn-error.log
+/iCreated-public/testem.log
+
+# ember-try
+/iCreated-public./node_modules.ember-try/
+/iCreated-public/package.json.ember-try
+/iCreated-public/jsconfig.json
