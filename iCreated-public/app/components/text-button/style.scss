@@ -1,6 +1,10 @@
 .text-button {
   cursor: pointer;
 
+  &:hover {
+    color: #636262;
+  }
+
   &__label {
     color: #98999A;
   }
