@@ -1,4 +1,10 @@
-{{navigation-header}}
-{{main-header}}
+{{#navigation-header
+    loadSearchBar=(action "loadSearchBar")}}
+  {{search-component showSearchBar=showSearchBar}}
+{{/navigation-header}}
+
+{{main-header linkTo='application'}}
+
 {{separation-line}}
+
 {{outlet}}

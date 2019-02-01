@@ -5,6 +5,9 @@
 
   &__heading {
     flex: 1;
+    cursor: pointer;
+    text-decoration: none;
+    color: #000;
   }
 
   &__sub-heading {

@@ -1,11 +1,16 @@
 import Component from '@ember/component';
 
 export default Component.extend({
-  // classNameBindings: ['classNames'],
-
   actions: {
+    /**
+     * On click handler for the button
+     *
+     * @method onClick
+     */
     onClick() {
-      this.onClickHandler();
+      if (typeof this.onClickHandler === 'function') {
+        this.onClickHandler();
+      }
     }
   }
 });

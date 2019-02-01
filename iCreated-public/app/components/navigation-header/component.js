@@ -6,12 +6,14 @@ export default Component.extend({
       debugger;
     },
 
-    openAbout() {
+    /**
+     * loadSearchBar closure action
+     *
+     * @method loadSearchBar
+     */
+    loadSearchBar() {
       debugger;
-    },
-
-    openCategories() {
-      debugger;
+      this.loadSearchBar();
     }
   }
 });

@@ -1,11 +1,12 @@
 .text-button {
   cursor: pointer;
 
-  &:hover {
-    color: #636262;
-  }
-
-  &__label {
+  &__link {
     color: #98999A;
+    text-decoration: none;
+
+    &:hover {
+      color: #636262;
+    }
   }
 }

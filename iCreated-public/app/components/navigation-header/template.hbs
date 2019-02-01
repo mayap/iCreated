@@ -1,14 +1,14 @@
 <div class="navigation-header">
   <div class="navigation-header__left-side">
-    {{text-button class="light-text-label outer-space-right" buttonLabel="About Us" onClickHandler=(action "openAbout")}}
-    {{text-button class="light-text-label" buttonLabel="Categories" onClickHandler=(action "openCategories")}}
+    {{text-button class="light-text-label outer-space-right" buttonLabel="About Us" linkTo="about"}}
+    {{text-button class="light-text-label" buttonLabel="Categories" linkTo="categories"}}
   </div>
 
   {{yield}}
 
   <div class="navigation-header__right-side">
-    {{icon-button icon="../assets/icons/search-icon.svg" class="small-outer-space-right"}}
-    {{icon-button icon="../assets/icons/love-icon.svg" class="small-outer-space-right"}}
+    {{icon-button icon="../assets/icons/search-icon.svg" class="small-outer-space-right" onClickHandler=(action "loadSearchBar")}}
+    {{icon-button icon="../assets/icons/love-icon.svg" class="small-outer-space-right" linkTo="wishlist"}}
     {{icon-button icon="../assets/icons/profile-icon.svg"}}
   </div>
 </div>

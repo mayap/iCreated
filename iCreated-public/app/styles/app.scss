@@ -1,7 +1,15 @@
+// App styles
 @import 'style';
-@import 'components/navigation-header/style';
-@import 'components/main-header/style';
-@import 'components/separation-line/style';
-@import 'components/item-summary/style';
-@import 'components/text-button/style';
+
+// Route styles
+@import 'about/style';
+
+// Component styles
+@import 'components/category-summary/style';
 @import 'components/icon-button/style';
+@import 'components/item-summary/style';
+@import 'components/main-header/style';
+@import 'components/navigation-header/style';
+@import 'components/search-component/style';
+@import 'components/separation-line/style';
+@import 'components/text-button/style';

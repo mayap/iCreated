@@ -1,3 +1,5 @@
 <div class="icon-button" {{action "onClick"}} role="button">
-  <img src={{icon}} class="icon-button__symbol" alt="">
+  {{#link-to linkTo}}
+    <img src={{icon}} class="icon-button__symbol" alt="">
+  {{/link-to}}
 </div>

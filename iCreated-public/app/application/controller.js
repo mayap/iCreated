@@ -1,17 +1,16 @@
 import Controller from '@ember/controller';
 
 export default Controller.extend({
-  // actions: {
-  //   onClickHandler() {
-  //     debugger;
-  //   },
+  showSearchBar: true,
 
-  //   openAbout() {
-  //     debugger;
-  //   },
-
-  //   openCategories() {
-  //     debugger;
-  //   }
-  // }
+  actions: {
+    /**
+     * Load search bar
+     *
+     * @method loadSearchBar
+     */
+    loadSearchBar() {
+      this.toggleProperty('showSearchBar');
+    }
+  }
 });
