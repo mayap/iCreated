@@ -1,5 +1,9 @@
 <div class="icon-button" {{action "onClick"}} role="button">
-  {{#link-to linkTo}}
+  {{#if linkTo}}
+    {{#link-to linkTo}}
+      <img src={{icon}} class="icon-button__symbol" alt="">
+    {{/link-to}}
+  {{else}}
     <img src={{icon}} class="icon-button__symbol" alt="">
-  {{/link-to}}
+  {{/if}}
 </div>

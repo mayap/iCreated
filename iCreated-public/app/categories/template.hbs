@@ -1,1 +1,3 @@
-{{category-summary category-image="../assets/icons/search-icon.svg" category-label="Test"}}
+{{#each model.categories as |category|}}
+  {{category-summary category-image="../assets/icons/search-icon.svg" category-label=category.name}}
+{{/each}}

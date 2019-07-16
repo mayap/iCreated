@@ -1,5 +1,9 @@
 <div class="text-button" {{action "onClick"}} role="button">
-  {{#link-to linkTo class="text-button__link"}}
+  {{#if linkTo}}
+    {{#link-to linkTo class="text-button__link"}}
+      {{buttonLabel}}
+    {{/link-to}}
+  {{else}}
     {{buttonLabel}}
-  {{/link-to}}
+  {{/if}}
 </div>
