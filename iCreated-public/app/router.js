@@ -11,6 +11,7 @@ Router.map(function() {
   this.route('categories');
   this.route('wishlist');
   this.route('profile');
+  this.route('display-items');
 });
 
 export default Router;

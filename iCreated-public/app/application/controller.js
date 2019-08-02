@@ -11,6 +11,10 @@ export default Controller.extend({
      */
     loadSearchBar() {
       this.toggleProperty('showSearchBar');
+    },
+
+    triggerSearch(newValue) {
+      this.transitionToRoute('display-items', { queryParams: { searchTerm: newValue } })
     }
   }
 });
