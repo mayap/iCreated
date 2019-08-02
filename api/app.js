@@ -76,6 +76,73 @@ app.get('/categories', function (req, res) {
     // }
   ]};
   res.send(JSON.stringify(result));
+});
+
+app.get('/items', function (req, res) {
+  const searchTerm = req.query.searchTerm;
+
+  let result = {
+    data: [
+      {
+        type: 'item',
+        id: 1,
+        attributes: {
+          name: 'Bonsai tree',
+          description: '',
+          owner: 'John Doe',
+          colors: []
+        },
+      },
+      {
+        type: 'item',
+        id: 2,
+        attributes: {
+          name: 'Yellow tree',
+          description: '',
+          owner: 'John',
+          colors: []
+        },
+      },
+      {
+        type: 'item',
+        id: 3,
+        attributes: {
+          name: 'Pantry',
+          description: '',
+          owner: 'Test User',
+          colors: []
+
+        },
+      },
+      {
+        type: 'item',
+        id: 4,
+        attributes: {
+          name: 'Bullet Journal',
+          description: '',
+          owner: 'Patrick',
+          colors: []
+
+        },
+      }
+  ]};
+
+  // if (searchTerm) {
+  //   let attrsArray = result.data.map(res => {
+  //     return res.attributes;
+  //   });
+
+  //   // console.log(result);
+  //   result = attrsArray.filter(res => {
+  //     if (res.name.includes(searchTerm) || res.description.includes(searchTerm)) {
+  //       return res;
+  //     }
+  //   });
+
+  //   console.log(result);
+  // }
+
+  res.send(JSON.stringify(result));
 
 });
 
