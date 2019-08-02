@@ -3,7 +3,6 @@ import Component from '@ember/component';
 export default Component.extend({
   actions: {
     onClickHandler() {
-      debugger;
     },
 
     /**
@@ -12,7 +11,6 @@ export default Component.extend({
      * @method loadSearchBar
      */
     loadSearchBar() {
-      debugger;
       this.loadSearchBar();
     }
   }
