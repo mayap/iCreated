@@ -24,12 +24,7 @@ app.get('/categories', function (req, res) {
           name: 'Shushe',
           itemCount: 2,
         },
-        'item-count': 3,
-        items: [
-          {},
-          {},
-          {}
-        ]
+        'item-count': 3
       },
       {
         type: 'category',
@@ -38,12 +33,7 @@ app.get('/categories', function (req, res) {
           name: 'zashto ne',
           itemCount: 3,
         },
-        'item-count': 3,
-        items: [
-          {},
-          {},
-          {}
-        ]
+        'item-count': 3
       },
       {
         type: 'category',
@@ -52,12 +42,7 @@ app.get('/categories', function (req, res) {
           name: 'chetesh',
           itemCount: 3,
         },
-        'item-count': 3,
-        items: [
-          {},
-          {},
-          {}
-        ]
+        'item-count': 3
       },
     // {
     //   name: 'Category 2',
@@ -75,6 +60,53 @@ app.get('/categories', function (req, res) {
     //   ]
     // }
   ]};
+  res.send(JSON.stringify(result));
+});
+
+app.get('/categories/:categoryId/items', function(req, res) {
+  const categoryId = parseInt(req.params.categoryId);
+
+  if (categoryId <= 0) {
+    res.status(400).send('Please enter a valid category id');
+
+    return;
+  }
+
+  let result = {
+    data: [
+      {
+        type: 'item',
+        id: 1,
+        attributes: {
+          name: 'Macrame bracelet',
+          description: '',
+          owner: 'Jenny',
+          colors: []
+        },
+      },
+      {
+        type: 'item',
+        id: 2,
+        attributes: {
+          name: 'Wooden bracelet',
+          description: '',
+          owner: 'Maraya',
+          colors: []
+        },
+      },
+      {
+        type: 'item',
+        id: 3,
+        attributes: {
+          name: 'Silver bracelet',
+          description: '',
+          owner: 'Test User',
+          colors: []
+
+        },
+      }
+  ]};
+
   res.send(JSON.stringify(result));
 });
 
