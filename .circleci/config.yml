@@ -14,7 +14,7 @@ jobs:
       # documented at https://circleci.com/docs/2.0/circleci-images/
       # - image: circleci/mongo:3.4.4
 
-    working_directory: ~/iCreated/iCreated-public
+    working_directory: ~/iCreated
 
     steps:
       - checkout
@@ -24,13 +24,13 @@ jobs:
           keys:
             - v1-dependencies-{{ checksum "package.json" }}
 
-      - run: npm install
+      - run: cd iCreated-public && npm install
 
       - save_cache:
           paths:
-            - node_modules
+            - iCreated-public/node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
 
       # run tests!
-      - run: npm test
-      - run: npm start
+      - run: cd iCreated-public && npm test
+      - run: cd iCreated-public && npm start
