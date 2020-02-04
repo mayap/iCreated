@@ -17,7 +17,8 @@ jobs:
     working_directory: ~/iCreated/iCreated-public
 
     steps:
-      - checkout
+      - checkout:
+          path: ~/iCreated
 
       # Download and cache dependencies
       - restore_cache:
@@ -28,9 +29,5 @@ jobs:
 
       - save_cache:
           paths:
-            - node_modules
+            - iCreated-public/node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
-
-      # run tests!
-      - run: npm test
-      - run: npm start
