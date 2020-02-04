@@ -18,7 +18,7 @@ jobs:
 
     steps:
       - checkout:
-        path: ~/iCreated
+          path: ~/iCreated
 
       # Download and cache dependencies
       - restore_cache:
